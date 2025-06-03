@@ -117,7 +117,7 @@ with st.expander("👤 المستخدم / الجلسة", expanded=True):
             set_session_id(custom_id.strip())
         else:
             set_session_id(selected_option)
-        st.rerun()
+        st.experimental_rerun()
     st.markdown(f"**معرف الجلسة الحالي:** `{get_session_id()}`")
 
 if ("messages" not in st.session_state or
@@ -206,11 +206,11 @@ if question := st.chat_input("اسأل سؤالاً ..."):
             kb_used, question_asked, final_answer = parse_arabic_qa_output(cached_answer)
             st.markdown("<div style='margin-bottom:6px'></div>", unsafe_allow_html=True)
             st.markdown("**📚 المعرفة المستخدمة:**")
-            st.markdown(f"<div style='background-color:#f9f9f9; border-radius:7px; color:#000000; padding:7px; margin-bottom:7px; direction:rtl;'>{kb_used if kb_used else 'لا توجد معلومة من قاعدة المعرفة.'}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='background-color:#f9f9f9; border-radius:7px; color:#000; padding:7px; margin-bottom:7px; direction:rtl;'>{kb_used if kb_used else 'لا توجد معلومة من قاعدة المعرفة.'}</div>", unsafe_allow_html=True)
             st.markdown("**❓ السؤال المرسل للنموذج:**")
-            st.markdown(f"<div style='background-color:#f4f7fa; border-radius:7px; color:#000000; padding:7px; margin-bottom:7px; direction:rtl;'>{question_asked if question_asked else question}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='background-color:#f4f7fa; border-radius:7px; color:#000; padding:7px; margin-bottom:7px; direction:rtl;'>{question_asked if question_asked else question}</div>", unsafe_allow_html=True)
             st.markdown("**💡 الجواب:**")
-            st.markdown(f"<div style='background-color:#d1ffd6; border-radius:7px; color:#000000; padding:10px; direction:rtl; font-size:1.15rem;'>{final_answer}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='background-color:#d1ffd6; border-radius:7px; color:#000; padding:10px; direction:rtl; font-size:1.15rem;'>{final_answer}</div>", unsafe_allow_html=True)
             st.caption(
                 f'<span style="color:green;">🔍</span> من الكاش (cosine: {distance:.2f})<br>'
                 f'⏱️ الزمن: {time.time() - start_time:.2f} ثانية',
