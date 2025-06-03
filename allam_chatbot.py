@@ -128,7 +128,7 @@ if ("messages" not in st.session_state or
 
 llm, cache, kb = load_chatbot()
 
-st.markdown("<h2 style='text-align:center;'>💬 شات Allam</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align:center;'>💬 شات ALLaM</h2>", unsafe_allow_html=True)
 st.markdown("<p style='text-align:center; font-size:1.1rem;'>اسأل أي سؤال، ويمكن للروبوت استخدام قاعدة المعرفة كمصدر.</p>", unsafe_allow_html=True)
 
 # ---- KB Manual Entry - main view
