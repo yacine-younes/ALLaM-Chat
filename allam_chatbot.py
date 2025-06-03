@@ -117,7 +117,7 @@ with st.expander("👤 المستخدم / الجلسة", expanded=True):
             set_session_id(custom_id.strip())
         else:
             set_session_id(selected_option)
-        st.experimental_rerun()
+        st.rerun()
     st.markdown(f"**معرف الجلسة الحالي:** `{get_session_id()}`")
 
 if ("messages" not in st.session_state or
