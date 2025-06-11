@@ -15,7 +15,7 @@ from PyPDF2 import PdfReader
 import re
 
 st.set_page_config(page_title="Allam Chatbot", layout="centered")
-st.image("redis.png", width=150)
+st.image("https://upload.wikimedia.org/wikipedia/commons/e/ee/Redis_logo.svg", width=150)
 
 def parse_arabic_qa_output(output):
     kb_match = re.search(r"\[معلومة من قاعدة المعرفة\]:(.*?)سؤال:", output, re.DOTALL)
