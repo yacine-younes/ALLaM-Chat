@@ -46,7 +46,7 @@ pip install --upgrade pip
 ### **C. Install All Python Dependencies**
 
 ```bash
-pip install torch transformers streamlit langchain langchain-community sentencepiece redis tiktoken chromadb fpdf PyPDF2 sentence-transformers huggingface_hub
+pip install torch transformers streamlit langchain langchain-community sentencepiece redis tiktoken chromadb fpdf PyPDF2 accelerate sentence-transformers huggingface_hub
 ```
 
 ### **D. Download the ALLaM LLM Model**
