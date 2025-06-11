@@ -223,11 +223,11 @@ if question := st.chat_input("اسأل سؤالاً ..."):
             kb_used, question_asked, final_answer = parse_arabic_qa_output(response)
             st.markdown("<div style='margin-bottom:6px'></div>", unsafe_allow_html=True)
             st.markdown("**📚 المعرفة المستخدمة:**")
-            st.markdown(f"<div style='background-color:#f9f9f9; border-radius:7px; padding:7px; margin-bottom:7px; direction:rtl;'>{kb_used if kb_used else 'لا توجد معلومة من قاعدة المعرفة.'}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='background-color:#f9f9f9; border-radius:7px; color:#000; padding:7px; margin-bottom:7px; direction:rtl;'>{kb_used if kb_used else 'لا توجد معلومة من قاعدة المعرفة.'}</div>", unsafe_allow_html=True)
             st.markdown("**❓ السؤال المرسل للنموذج:**")
-            st.markdown(f"<div style='background-color:#f4f7fa; border-radius:7px; padding:7px; margin-bottom:7px; direction:rtl;'>{question_asked if question_asked else question}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='background-color:#f4f7fa; border-radius:7px; color:#000; padding:7px; margin-bottom:7px; direction:rtl;'>{question_asked if question_asked else question}</div>", unsafe_allow_html=True)
             st.markdown("**💡 الجواب:**")
-            st.markdown(f"<div style='background-color:#eaffea; border-radius:7px; padding:10px; direction:rtl; font-size:1.15rem;'>{final_answer}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='background-color:#eaffea; border-radius:7px; color:#000; padding:10px; direction:rtl; font-size:1.15rem;'>{final_answer}</div>", unsafe_allow_html=True)
             st.caption(
                 f"⏱️ الزمن: {time.time() - start_time:.2f} ثانية",
                 unsafe_allow_html=True,
